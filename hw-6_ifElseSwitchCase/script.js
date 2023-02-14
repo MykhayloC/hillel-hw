@@ -45,11 +45,11 @@ switch (cityOfResidence) {
 
 let kindOfSport;
 
-if (favoriteSport === 'Футбол' || favoriteSport === 'футбол') {
+if (favoriteSport && favoriteSport.toLowerCase() === 'футбол') {
     kindOfSport = 'Круто! Хочете стати Мессі?';
-} else if (favoriteSport === 'Бокс' || favoriteSport === 'бокс') {
+} else if (favoriteSport && favoriteSport.toLowerCase() === 'бокс') {
     kindOfSport = 'Круто! Хочете стати Кличко?';
-} else if (favoriteSport === 'Гольф' || favoriteSport === 'гольф') {
+} else if (favoriteSport && favoriteSport.toLowerCase() === 'гольф') {
     kindOfSport = 'Круто! Хочете стати Вудсом?';
 } else {
     kindOfSport = `${favoriteSport} - прикольний вид спорту!`;
@@ -64,12 +64,12 @@ if (yearOfBirth && yearOfBirth >= 1900 && yearOfBirth <= 2022) {
 } else {
     firstMessage = `Ваш вік невідомий`;
 }
-if (cityOfResidence) {
+if ((typeof cityOfResidence === "string") && cityOfResidence.trim()) {
     secondMessage = cityOfUserMessage;
 } else {
     secondMessage = `Місто Вашого проживання невідоме`;
 }
-if (favoriteSport) {
+if ((typeof favoriteSport === "string") &&favoriteSport.trim()) {
     thirdMessage = kindOfSport;
 } else {
     thirdMessage = `Ваш улюблений вид спорту невідомий`;
