@@ -64,5 +64,5 @@ console.log(`\nМасив телефонних номерів користува
 console.log(phoneNumbers);
 
 let sumOfBalances = users.map(item => item.balance).reduce((accum, currentValue) => accum + currentValue);
-sumOfBalances = '$' + Math.floor(sumOfBalances / 1000) + ',' + (Math.round((sumOfBalances % 1000) * 100) / 100);
+sumOfBalances = '$' + sumOfBalances.toLocaleString('en-US');
 console.log(`\nСума всіх балансів користувачів - ${sumOfBalances}`);
