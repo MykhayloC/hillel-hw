@@ -18,8 +18,10 @@ function changeString(stringToChange, symbols) {
     return stringToChange;
 }
 
+const resultOfChanging = changeString(stringFromUserInLowerCase, symbolsToReplace);
+
 if (typeof stringFromUser !== "string" || typeof symbolsToReplaceFromUser !== "string") {
-    console.log('введено некоректні дані!');
-} else if (stringFromUserInLowerCase === changeString(stringFromUserInLowerCase, symbolsToReplace)) {
+    console.log('Введено некоректні дані!');
+} else if (stringFromUserInLowerCase === resultOfChanging) {
     console.log(stringFromUser)
-} else console.log(changeString(stringFromUserInLowerCase, symbolsToReplace));
+} else console.log(resultOfChanging);

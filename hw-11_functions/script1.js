@@ -7,7 +7,8 @@ const arr = [5, 10, 'string', '  ', null, 12, true, 167];
 let result = (arrayOfValues) => {
     let i = 0;
     let sum = 0;
-    arrayOfValues.forEach((item) => {if (typeof item === "number") {
+    arrayOfValues.forEach((item) => {
+        if (typeof item === "number") {
         ++i;
         sum += item
     }});

@@ -22,7 +22,7 @@ function doMath(x, znak, y) {
         case '/': return x / y;
         case '%': return x % y;
         case '^': return x ** y;
-        default: return false;
+        default: return null;
     }
 }
 
