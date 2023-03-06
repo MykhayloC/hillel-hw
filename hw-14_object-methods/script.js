@@ -17,9 +17,9 @@ const shoppingCart = {
         indexToDelete !== (-1) ? this.items.splice(indexToDelete, 1) : console.log(`Товар ${itemName} відсутній в корзині`);
     },
     getTotalSum(){
-        return this.items.map(item => item.count * item.price).reduce((accum, currentValue) => accum + currentValue);
+        return this.items.reduce((accum, currentValue) => accum + currentValue.count * currentValue.price, 0);
     },
-    getAllItems(){
+    showAllItems(){
         console.log(this.items)
     },
 };
@@ -42,14 +42,14 @@ const newItem3 = {
     price: 1200,
 }
 
-shoppingCart.getAllItems();
+shoppingCart.showAllItems();
 shoppingCart.addItem(newItem1);
-shoppingCart.getAllItems();
+shoppingCart.showAllItems();
 shoppingCart.addItem(newItem2);
-shoppingCart.getAllItems();
+shoppingCart.showAllItems();
 shoppingCart.addItem(newItem3);
-shoppingCart.getAllItems();
+shoppingCart.showAllItems();
 console.log(`Загальна вартість товарів в корзині складає ` + shoppingCart.getTotalSum() + ` умовних одиниць`);
 shoppingCart.deleteItem("phone");
-shoppingCart.getAllItems();
+shoppingCart.showAllItems();
 console.log(`Загальна вартість товарів в корзині складає ` + shoppingCart.getTotalSum() + ` умовних одиниць`);
