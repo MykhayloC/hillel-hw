@@ -3,12 +3,7 @@
 let arrayOfGoods = [];
 
 function createItem(name, category, count, price) {
-    let item = {};
-    item.name = name;
-    item.category = category;
-    item.count = count;
-    item.price = price;
-    arrayOfGoods.push(item);
+    arrayOfGoods.push({name, category, count, price});
 }
 
 // Створення масиву товарів
@@ -22,12 +17,12 @@ createItem('Galaxy', 'Phones', 10, 10000);
 createItem('IPhone', 'Phones', 5, 20000);
 createItem('Shirt', 'Closes', 15, 200);
 
-let categories = [];
-for (let i = 0; i < arrayOfGoods.length; i++) {
-    if (!categories.includes(arrayOfGoods[i].category)) {
-        categories.push(arrayOfGoods[i].category)
-    } else continue;
-}
+const categories = arrayOfGoods.reduce((acc,item) => {
+    if (!acc.includes(item.category)) {
+        acc.push(item.category)
+    }
+        return acc;
+}, []);
 
 const leftCol = document.querySelector('.left-col');
 const centerCol = document.querySelector('.center-col');
@@ -91,15 +86,14 @@ function handlerNames() {
     centerCol.querySelector('ul')?.remove();
     const nameList = document.createElement('ul');
     centerCol.append(nameList);
-
-    let goodsOfCategory = [];
-
     const categoryName = this.innerHTML;
-    for (let i = 0; i < arrayOfGoods.length; i++) {
-        if (arrayOfGoods[i].category === categoryName) {
-            goodsOfCategory.push(arrayOfGoods[i].name);
-        } else continue;
-    }
+
+    const goodsOfCategory = arrayOfGoods.reduce((acc, item) => {
+        if (item.category === categoryName) {
+            acc.push(item.name);
+        }
+        return acc;
+    }, []);
 
     goodsOfCategory.forEach(item => {
 
@@ -131,7 +125,7 @@ function handlerGoods() {
                 let goodsResult = goodsProperty + ' of product: ' + arrayOfGoods[i][key];
                 productInfo.push(goodsResult);
             }
-        } else continue;
+        }
     }
 
     productInfo.forEach(item => {
