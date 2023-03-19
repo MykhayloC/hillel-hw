@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw-16</title>
+</head>
+<body>
+<div class="main-div">
+    <div class="row">
+        <div class="col left-col">
+            <h2 class="col-name">Categories</h2>
+        </div>
+        <div class="col center-col">
+            <h2 class="col-name">List of goods from chosen category</h2>
+        </div>
+        <div class="col right-col">
+            <h2 class="col-name">Chosen product</h2>
+        </div>
+    </div>
+</div>
+<style>
+    .col {
+        height: 600px;
+        width: 33.333%;
+        margin: .5rem;
+    }
+
+    .row {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    .col-name {
+        padding: 10px;
+        text-align: center;
+        color: darkblue;
+    }
+
+    .button {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .reg-form {
+        text-align: center;
+    }
+</style>
+
+<script src="script.js"></script>
+</body>
+</html>
