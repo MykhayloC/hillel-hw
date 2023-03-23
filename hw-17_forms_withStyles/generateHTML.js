@@ -228,12 +228,12 @@ function handlerGoods(e) {
 
         const nextRow = document.createElement('br');
         formBody.append(nextRow);
-        const submitBtn = document.createElement('input');
+        const submitBtn = document.createElement('button');
         submitBtn.type = 'submit';
         submitBtn.textContent = "Confirm!";
         formBody.append(submitBtn);
 
-        submitBtn.addEventListener('click', submitForm);
+        formBody.addEventListener('submit', submitForm);
 
         function submitForm(e) {
             e.preventDefault();
