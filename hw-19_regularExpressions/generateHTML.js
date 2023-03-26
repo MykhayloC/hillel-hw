@@ -114,17 +114,13 @@ function handlerGoods(e) {
         const nameMessage = "Input your name and surname";
         createTitleOfElement('name-message', nameMessage, formBody);
         const inputNameElement = document.querySelector('#name');
-        inputNameElement.addEventListener('change', checkNameData);
+        const namePattern = /^[A-Z][a-z]+\s[A-Z][a-z]+$/i;
+        inputNameElement.addEventListener('change', checkName);
 
-        function checkNameData() {
+        function checkName() {
             const messageElement = document.querySelector('#name-message');
-            const nameData = inputNameElement.value;
-            const nameArray = nameData.split(' ');
-
-            if (nameArray.length < 2) {
-                messageElement.className = errorClass;
-                messageElement.innerHTML = errorMessage;
-            } else messageElement.innerHTML = '';
+            const checkText = inputNameElement.value;
+            checkExpression(messageElement, namePattern, checkText);
         }
 
         const emailPlaceholder = "email";
@@ -152,8 +148,6 @@ function handlerGoods(e) {
         function checkPhone() {
             const messageElement = document.querySelector('#phone-message');
             const checkText = inputPhoneElement.value;
-            // console.log(phonePattern.test(checkText));
-
             checkExpression(messageElement,phonePattern, checkText)
         }
 
@@ -316,18 +310,6 @@ function checkExpression(element, regularExpression, valueToCheck) {
         element.innerHTML = errorMessage;
     }
 }
-
-// function checkNameData() {
-//     const messageElement = document.querySelector('#name-message');
-//     const nameData = inputNameElement.value;
-//     const nameArray = nameData.split(' ');
-//
-//     if (nameArray.length < 2) {
-//         messageElement.className = errorClass;
-//         messageElement.innerHTML = errorMessage;
-//     } else messageElement.innerHTML = '';
-// }
-
 
 function createTitleOfElement(id, elementText, parentElement) {
     const element = document.createElement('p');
