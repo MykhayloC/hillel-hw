@@ -1,0 +1,106 @@
+.body {
+    background-color: aquamarine;
+}
+
+.main-container {
+    padding: 5px;
+}
+
+.cols-container {
+    margin: 5px;
+}
+
+.cols {
+    display: flex;
+    margin: 5px;
+}
+
+.col-left {
+    width: 25%;
+}
+
+.col-center {
+    width: 25%;
+}
+
+.col-right {
+    width: 50%;
+}
+
+.catalog-header {
+    padding-left: 10px;
+    text-align: left;
+    color: blue;
+}
+
+.col-body {
+    margin: 5px;
+}
+
+.list {
+    color: dimgrey;
+}
+
+.bordered {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.form-container {
+    margin: 5px;
+    padding: 5px;
+}
+.form-header {
+    padding-left: 10px;
+    text-align: left;
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.form-body {
+    padding-left: 10px;
+    text-align: left;
+}
+
+span:hover {
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+.buy-button {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.property {
+    padding-left: 10px;
+}
+
+.clear-btn {
+    margin-left: 5px;
+}
+
+.input-error {
+    color: red;
+    text-decoration: underline;
+}
+
+.clear-radio {
+    display: none;
+}
+
+.final-info-head {
+    color: crimson;
+    text-decoration: underline;
+}
+
+.final-info-body {
+    color: fuchsia;
+}
