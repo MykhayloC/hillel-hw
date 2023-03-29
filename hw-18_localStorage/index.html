@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>E-shop</title>
+</head>
+<body class="body">
+    <div class="main-container">
+        <div class="cols-container">
+            <div class="cols col-head">
+                <div id="left-head" class="col-left col-head">
+
+                </div>
+                <div id="center-head" class="col-center col-head">
+
+                </div>
+                <div id="right-head" class="col-right col-head">
+
+                </div>
+            </div>
+            <div class="cols col-body">
+                <div id="left-body" class="col-left col-body">
+                    <div class="list" id="left-list">
+
+                    </div>
+                </div>
+                <div id="center-body" class="col-center col-body">
+                    <div class="list" id="center-list">
+
+                    </div>
+                </div>
+                <div id="right-body" class="col-right col-body">
+                    <div class="list">
+                        <div id="right-list">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <div class="form-header">
+                <h3>Please fill the registration form</h3>
+            </div>
+            <div class="form-body-container">
+                <form class="form-body" name="registration-form">
+                    <input type="text" name="name" id="name" required class="input-data" placeholder="Name Surname" size="30">
+                    <p id="name-message" class="input-message">Input your name and surname</p>
+                    <input type="text" name="email" id="email" required class="input-data" placeholder="email" size="30"><br>
+                    <p id="email-message" class="input-message">Input your email</p>
+                    <input type="text" name="phone" id="phone" required class="input-data" placeholder="phone number" size="30"><br>
+                    <p id="phone-message" class="input-message">Input your phone number</p>
+                    <select id="select" name="cities" required></select><br>
+                    <p id="city-message" class="input-message">Select your city</p>
+                    <input type="text" name="warehouse" id="warehouse" required class="input-data" placeholder="warehouse" size="30"><br>
+                    <p id="warehouse-message" class="input-message">Input the number of NovaPoshta warehouse</p>
+                    <div class="radio-container">
+                        <input type="radio" name="payment" id="advance" class="radio-btn" value="advance-payment" checked>
+                        <label for="advance">Payment in advance</label>
+                        <input type="radio" name="payment" id="after" class="radio-btn" value="after-payment">
+                        <label for="after">After payment</label>
+                        <input type="radio" name="payment" id="bank" class="radio-btn" value="bank-payment">
+                        <label for="bank">Payment with bank card</label>
+                    </div>
+                    <p id="payment-message" class="input-message">Choose the type of payment</p>
+                    <input type="number" name="amount" id="amount" class="input-data" min=1 step=1 required value="1">
+                    <p id="amount-message" class="input-message">Input amount of items for ordering</p>
+                    <textarea name="comments" id="comments" rows=5 cols=30 placeholder="Your comment"></textarea>
+                    <p id="comment-message" class="input-message">leave some comments for your order</p>
+
+                </form>
+            </div>
+        </div>
+        <div class="buttons-container">
+
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+
+</body>
+</html>

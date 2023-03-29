@@ -1,0 +1,128 @@
+.body {
+    background-color: aquamarine;
+}
+
+.main-container {
+    padding: 5px;
+}
+
+.cols-container {
+    margin: 5px;
+}
+
+.cols {
+    display: flex;
+    margin: 5px;
+}
+
+.col-left {
+    width: 25%;
+}
+
+.col-center {
+    width: 25%;
+}
+
+.col-right {
+    width: 50%;
+}
+
+.catalog-header {
+    padding-left: 10px;
+    text-align: center;
+    color: blue;
+}
+
+.col-body {
+    margin: 5px;
+}
+
+.list {
+    color: dimgrey;
+}
+
+.bordered {
+    border: 2px solid white;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.form-container {
+    margin: 5px;
+    padding: 5px;
+    display: none;
+}
+.form-header {
+    padding-left: 10px;
+    text-align: left;
+    text-decoration: underline;
+    color: darkblue;
+}
+
+.form-body {
+    padding-left: 10px;
+    text-align: left;
+}
+
+.list-element {
+    padding-left: 20px;
+    font-size: large;
+}
+
+.list-element:hover {
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+span:hover {
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+}
+
+.buy-button {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.property {
+    padding-left: 10px;
+}
+
+.clear-btn {
+    margin-left: 5px;
+}
+
+.input-error {
+    color: red;
+    text-decoration: underline;
+    padding-left: 10px;
+}
+
+.clear-radio {
+    visibility: hidden;
+}
+
+.final-info-head {
+    color: crimson;
+    text-decoration: underline;
+}
+
+.final-info-body {
+    color: fuchsia;
+}
+
+.buttons-container {
+    padding-left: 20px;
+}
+
+
