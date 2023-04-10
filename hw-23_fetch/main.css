@@ -1,0 +1,26 @@
+body {
+    background-color: lightcyan;
+}
+
+h1 {
+    text-align: center;
+    font-size: xx-large;
+    text-shadow: dimgrey 1px 0 5px;
+    color: red;
+    font-family: "Arial Black";
+}
+
+.cities {
+    margin-left: 30px;
+}
+
+.main-container {
+    margin-left: 30px;
+    margin-top: 15px;
+}
+
+.list {
+    color: indigo;
+    font-family: Arial;
+    font-weight: bolder;
+}
