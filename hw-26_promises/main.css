@@ -1,0 +1,53 @@
+body {
+    background-color: lightcyan;
+}
+
+h2 {
+    margin-left: 30px;
+    font-family: Arial;
+    font-weight: bold;
+    color: indigo;
+}
+
+.input-id {
+    margin-left: 20px;
+}
+
+.info-message {
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: smaller;
+    color: red;
+}
+
+.btn-container {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.input-id:hover {
+    border: 3px solid red;
+    border-radius: 3px;
+}
+
+.post-container {
+    margin-left: 20px;
+}
+
+.comments-container {
+    margin-left: 20px;
+}
+
+.post-name {
+    /*margin-left: 20px;*/
+    font-family: "Arial Narrow";
+    color: darkgreen;
+}
+
+.post-content {
+    font-style: normal;
+}
+
+#show-comments-btn {
+    visibility: hidden;
+}
